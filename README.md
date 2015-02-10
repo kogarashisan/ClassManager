@@ -24,6 +24,7 @@ Lava.ClassManager.define(
 	steps: 0,
 	food: [], // will NOT be shared across class instances
 	
+	// constructor
 	init: function(name) {
 		this.name = name;
 	},
