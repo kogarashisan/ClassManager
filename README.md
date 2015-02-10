@@ -5,7 +5,7 @@ http://www.lava-framework.com/
 
 ##Attention!
 
-Standalone ClassManager is self-contained (it does not need MooTools, like the main framework).
+Standalone ClassManager is self-contained (it does not depend on MooTools, like the main framework).
 
 ##Usage example
 
