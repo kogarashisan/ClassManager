@@ -3,6 +3,10 @@
 See the docs:
 http://www.lava-framework.com/
 
+##Attention!
+
+Standalone ClassManager is self-contained (it does not need MooTools, like the main framework).
+
 ##Usage example
 
 You may either require(`lib/class_manager.js`) or include it directly in browser.
