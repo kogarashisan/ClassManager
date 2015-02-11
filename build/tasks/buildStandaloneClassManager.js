@@ -29,7 +29,8 @@ module.exports = function(grunt) {
 			t: Lava.t,
 			VALID_PROPERTY_NAME_REGEX: Lava.VALID_PROPERTY_NAME_REGEX,
 			JS_KEYWORDS: Lava.JS_KEYWORDS,
-			ClassManager: null
+			ClassManager: null,
+			instanceOf: Lava.instanceOf
 		};
 
 		var tmp = wrapper_content.split("/*<%content%>*/");
