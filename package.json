@@ -1,6 +1,6 @@
 {
   "name": "lava-class-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fast and beautiful class system",
   "author": "Alex Galashov",
   "main": "lib/class_manager.js",
