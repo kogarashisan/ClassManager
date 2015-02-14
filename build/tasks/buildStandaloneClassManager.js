@@ -1,12 +1,36 @@
 
 module.exports = function(grunt) {
 
+	var KNOWN_DEPENDENCIES = [
+		'Firestorm.extend',
+		'Firestorm.implement',
+		'Firestorm.getType',
+		'Firestorm.String.quote',
+		'Firestorm.Object.copy',
+		'Firestorm.Object.isEmpty',
+		'Lava.schema.DEBUG',
+		'Lava.t',
+		'Lava.VALID_PROPERTY_NAME_REGEX.test',
+		'Lava.JS_KEYWORDS.indexOf',
+		'Lava.ClassManager',
+		'Lava.ClassManager.getClassData',
+		'Lava.widget"' // in comment
+	];
+
 	grunt.registerTask('buildStandaloneClassManager', global.bug1135(function() {
 
 		var Lava = require('lava'),
 			Firestorm = Lava.getFirestorm(),
 			class_manager_src = grunt.file.read(global.LAVA_CORE_PATH + "src/ClassManager.js"),
 			wrapper_content = grunt.file.read('build/wrapper.js');
+
+		// it's better to do it with Esprima or something...
+		var references = class_manager_src.match(/(Lava|Firestorm)\.[^\(\)\s\#\<\>)]+/g);
+		references.forEach(function(reference) {
+			if (KNOWN_DEPENDENCIES.indexOf(reference) == -1) {
+				Lava.t("unknown reference: " + reference);
+			}
+		});
 
 		var firestorm_export = {
 			extend: Firestorm.extend, // no dependencies
@@ -19,6 +43,11 @@ module.exports = function(grunt) {
 				quote_escape_map: Firestorm.String.quote_escape_map, // needed by quote
 				QUOTE_ESCAPE_REGEX: Firestorm.String.QUOTE_ESCAPE_REGEX, // needed by quote
 				quote: Firestorm.String.quote
+			},
+
+			Object: {
+				copy: Firestorm.Object.copy,
+				isEmpty: Firestorm.Object.isEmpty
 			}
 		};
 
