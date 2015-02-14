@@ -10,7 +10,7 @@ Attention: standalone version is self-contained (it does not depend on MooTools 
 
 ##Usage example
 
-You may either `require("lib/class_manager.js")` (in Node.js environment) or include it directly in browser.
+You may either `require("lava-class-manager")` (in Node.js environment) or include it directly in browser.
 You will get a partial copy of Lava object with ClassManager and it's dependencies.
 
 ```javascript
