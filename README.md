@@ -55,6 +55,9 @@ Lava.instanceOf(cat, "global.Animal");
 
 ##Changelog
 
+<b>1.0.3</b>
+- [Fix] Fixed an issue in Node.js environment, when generated constructor was invalid. Slightly improved performance.
+
 <b>1.0.2</b>
 
 - [Feature] Added possibility to store arrays in Shared
