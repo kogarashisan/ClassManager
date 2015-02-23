@@ -59,7 +59,10 @@ module.exports = function(grunt) {
 			VALID_PROPERTY_NAME_REGEX: Lava.VALID_PROPERTY_NAME_REGEX,
 			JS_KEYWORDS: Lava.JS_KEYWORDS,
 			ClassManager: null,
-			instanceOf: Lava.instanceOf
+			instanceOf: Lava.instanceOf,
+			define: function(class_path, source_object) {
+				this.ClassManager.define(class_path, source_object);
+			}
 		};
 
 		var tmp = wrapper_content.split("/*<%content%>*/");
