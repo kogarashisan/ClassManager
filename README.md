@@ -3,10 +3,10 @@
 One of the fastest and most convenient class systems in the world.
 
 Quick facts:
+- Speed is comparable to native hand-written classes
+- Powerful features like run-time prototype patching and shared members
 - Classes can be generated on server and in browser
 - Supports multiple inheritance
-- Monomorphism optimizations
-- Has powerful features like run-time prototype patching and shared members
 
 Docs:
 - [Basic tutorial](http://www.lava-framework.com/www/doc.html#tutorial=Classes)
@@ -19,36 +19,30 @@ Standalone version is self-contained (it does not have any dependencies, like th
 
 ##Performance
 
+Performance comparison of the fastest class systems:
+- Overridden method calls: http://jsperf.com/js-inheritance-method-calls/2
+- Object construction: http://jsperf.com/js-inheritance-object-construction
+
+For your convenience, performance tests have their own repository:
+https://github.com/kogarashisan/PerfTests
+
+##Performance notes
+
 ClassManager can generate classes in two modes, depending on `is_monomorphic` switch.
 Monomorphic mode generates classes with slower constructors, but fast method calls 
 (due to the fact, that all class instances will have the same internal type, reducing method polymorphism).
 Polymorphic mode generates fast constructors with slower method calls.
 
-<i>High quality polymorphic tests are coming soon...</i> 
-
-Meanwhile you can have a look at the following tests, which are not 100% correct:
-- <a href="http://jsperf.com/liquidlava-class-system-performance/10">ClassManager vs native classes</a> 
-(`counter` is overflown, and no polymorphism)
-- <a href="http://jsperf.com/js-inheritance-performance/62">Hybrid test of a dozen of class systems</a> 
-(incorrectly mixes class creation time and method calls)
-
 <b>Constructor generation performance</b>
 
-Class generation in ClassManager is slower in comparison to other class systems, but:
+Creating a class constructor takes some time in all class systems (not class instance, but the constructor).
+There are no performance tests for class definitions, cause it's not fair to compare 
+browser-only class systems with language preprocessors.
+
+You should know, that class generation in ClassManager is slower in comparison to other systems, but:
 - it's still very fast, so you can comfortably use it in browser
 - generated classes are extremely fast
 - <i>classes can be generated on server</i> (like with CoffeeScript or TypeScript preprocessors)
-
-There will be no performance tests for class constructor generation time, 
-cause it's not fair to compare class systems with language preprocessors.
-
-<b>Class construction performance</b>
-
-<i>Coming soon...</i>
-
-<b>Method call performance</b>
-
-<i>Coming soon...</i>
 
 ##Usage example
 
