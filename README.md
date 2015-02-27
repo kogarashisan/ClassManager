@@ -94,6 +94,11 @@ Lava.instanceOf(cat, "global.Animal");
 While using compression - you can not mangle method names in class bodies, cause this will break inheritance.
 Good-behaving compression tools will not do it, anyway.
 
+There is no official way to define a true private method: private methods in JavaScript are considered 
+bad practice by the author, cause they usually come at cost of inflexibility and speed. Instead, you are recommended 
+to use protected methods (name begins wih underscore). But if you really need it - you can create a private method with
+traditional techniques.
+
 ##Changelog
 
 <b>1.1.0</b>
