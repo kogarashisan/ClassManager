@@ -124,7 +124,7 @@ This technique works in PHPStorm. Unfortunately, parent method calls can not be 
 ##Extras
 
 You can reuse several classes, that come with the main framework:
-- [Lava.system.Serializer](http://www.lava-framework.com/www/doc.html#class=Lava.system.Serializer) - \
+- [Lava.system.Serializer](http://www.lava-framework.com/www/doc.html#class=Lava.system.Serializer) - 
 pretty-print any JavaScript objects (even those, which contain functions). 
 [Source](https://github.com/kogarashisan/LiquidLava/blob/master/src/System/Serializer.class.js)
 - [Lava.mixin.Observable](http://www.lava-framework.com/www/doc.html#class=Lava.mixin.Observable) - 
