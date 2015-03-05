@@ -76,6 +76,21 @@ module.exports = function(grunt) {
 
 		grunt.file.write("lib/class_manager.js", result);
 
+		/*
+		// create minified version
+		var UglifyJS = require('uglify-js');
+		var compress_result = UglifyJS.minify(["lib/class_manager.js"], {
+			mangle: true,
+			compress: {
+				dead_code: true,
+				unsafe: true,
+				unused: true
+			}
+		});
+
+		grunt.file.write("lib/class_manager.min.js", compress_result.code);
+		*/
+
 	}));
 
 };

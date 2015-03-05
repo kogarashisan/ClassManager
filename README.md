@@ -1,5 +1,8 @@
 #Standalone version of Lava.ClassManager
 
+[![npm](https://img.shields.io/npm/v/lava-class-manager.svg)](https://www.npmjs.com/package/lava-class-manager)
+[![npm](https://img.shields.io/npm/l/lava-class-manager.svg)]()
+
 One of the fastest and most convenient class systems in the world.
 
 Quick facts:
@@ -46,12 +49,18 @@ You should know, that class generation in ClassManager is slower in comparison t
 
 ##Usage example
 
+ClassManager is available as NPM module, which can be installed with the following command:
+
+```
+npm install lava-class-manager
+```
+
 You may either `require("lava-class-manager")` (in Node.js environment) or include it directly in browser.
-You will get a partial copy of Lava object with ClassManager and it's dependencies.
+You will get a <i>partial copy of Lava object</i> with ClassManager and it's dependencies.
 
 ```javascript
 // in Node.js environment:
-// var Lava = require("lava-class-manager");
+var Lava = require("lava-class-manager");
 // in browser:
 // <script src="path/to/ClassManager/lib/class_manager.js"></script>
 
@@ -88,6 +97,42 @@ cat.walk();
 
 Lava.instanceOf(cat, "global.Animal");
 ```
+
+##JSDoc annotations and IDE support
+
+You can help IDE to recognize ClassManager inheritance model by adding proper JSDoc comments to each class:
+
+```
+Lava.define(
+'Lava.data.MetaStorage',
+/**
+ * @lends Lava.data.MetaStorage#
+ * @extends Lava.data.ModuleAbstract
+ * @extends Lava.mixin.Properties
+ */
+{
+	Extends: 'Lava.data.ModuleAbstract',
+	Implements: 'Lava.mixin.Properties',
+	// ...
+});
+```
+
+Parent class and all mixins should be listed with `@extends` JSDoc tag - this will enable IDE hinting for parent members.
+Class itself should be exported by `@lends` tag - this will enable hinting on constructed object instances.
+This technique works in PHPStorm. Unfortunately, parent method calls can not be automatically recognized at this moment.
+
+##Extras
+
+You can reuse several classes, that come with the main framework:
+- [Lava.system.Serializer](http://www.lava-framework.com/www/doc.html#class=Lava.system.Serializer) - \
+pretty-print any JavaScript objects (even those, which contain functions). 
+[Source](https://github.com/kogarashisan/LiquidLava/blob/master/src/System/Serializer.class.js)
+- [Lava.mixin.Observable](http://www.lava-framework.com/www/doc.html#class=Lava.mixin.Observable) - 
+carefully thought-out events for your classes. 
+[Source](https://github.com/kogarashisan/LiquidLava/blob/master/src/Mixin/Observable.class.js)
+- [Lava.mixin.Properties](http://www.lava-framework.com/www/doc.html#class=Lava.mixin.Properties) -
+adds `get()` and `set()` methods to manipulate properties and fires two kinds of "changed" events when they change.
+[Source](https://github.com/kogarashisan/LiquidLava/blob/master/src/Mixin/Properties.class.js)
 
 ##Limitations
 
