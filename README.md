@@ -1,3 +1,5 @@
+<i>Update 09.03.15: "polymorphic mode" and "full export" features are deprecated.</i>
+
 #Standalone version of Lava.ClassManager
 
 [![npm](https://img.shields.io/npm/v/lava-class-manager.svg)](https://www.npmjs.com/package/lava-class-manager)
