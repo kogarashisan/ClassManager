@@ -14,11 +14,11 @@ Quick facts:
 - Supports multiple inheritance
 
 Docs:
-- [Basic tutorial](http://www.lava-framework.com/www/doc.html#tutorial=Classes)
-- [Detailed reference](http://www.lava-framework.com/www/doc.html#reference=Classes)
-- [Patches and static constructors](http://www.lava-framework.com/www/doc.html#reference=ClassPatches)
-- [Packages](http://www.lava-framework.com/www/doc.html#reference=Packages)
-- [API](http://www.lava-framework.com/www/doc.html#object=Lava.ClassManager)
+- [Basic tutorial](http://www.lava-framework.com/www/doc/tutorial/Classes.html)
+- [Detailed reference](http://www.lava-framework.com/www/doc/reference/Classes.html)
+- [Patches and static constructors](http://www.lava-framework.com/www/doc/reference/ClassPatches.html)
+- [Packages](http://www.lava-framework.com/www/doc/reference/Packages.html)
+- [API](http://www.lava-framework.com/www/doc/object/Lava.ClassManager.html)
 
 Standalone version is self-contained (it does not have any dependencies, like the main framework).
 
@@ -126,13 +126,13 @@ This technique works in PHPStorm. Unfortunately, parent method calls can not be 
 ##Extras
 
 You can reuse several classes, that come with the main framework:
-- [Lava.system.Serializer](http://www.lava-framework.com/www/doc.html#class=Lava.system.Serializer) - 
+- [Lava.system.Serializer](http://www.lava-framework.com/www/doc/class/Lava.system.Serializer.html) - 
 pretty-print any JavaScript objects (even those, which contain functions). 
 [Source](https://github.com/kogarashisan/LiquidLava/blob/master/src/System/Serializer.class.js)
-- [Lava.mixin.Observable](http://www.lava-framework.com/www/doc.html#class=Lava.mixin.Observable) - 
+- [Lava.mixin.Observable](http://www.lava-framework.com/www/doc/class/Lava.mixin.Observable.html) - 
 carefully thought-out events for your classes. 
 [Source](https://github.com/kogarashisan/LiquidLava/blob/master/src/Mixin/Observable.class.js)
-- [Lava.mixin.Properties](http://www.lava-framework.com/www/doc.html#class=Lava.mixin.Properties) -
+- [Lava.mixin.Properties](http://www.lava-framework.com/www/doc/class/Lava.mixin.Properties.html) -
 adds `get()` and `set()` methods to manipulate properties and fires two kinds of "changed" events when they change.
 [Source](https://github.com/kogarashisan/LiquidLava/blob/master/src/Mixin/Properties.class.js)
 
