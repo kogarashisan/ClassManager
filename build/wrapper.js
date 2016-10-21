@@ -1,3 +1,6 @@
+/*!
+ * https://github.com/kogarashisan/ClassManager/
+ */
 (function (_global) {
 
 /*<%content%>*/

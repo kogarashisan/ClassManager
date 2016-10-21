@@ -8,7 +8,7 @@
 One of the fastest and most convenient class systems in the world.
 
 Quick facts:
-- Speed is comparable to native hand-written classes
+- Speed is equal to native hand-written classes
 - Powerful features like run-time prototype patching and shared members
 - Classes can be generated on server and in browser
 - Supports multiple inheritance
@@ -20,11 +20,11 @@ Docs:
 - [Packages](http://www.lava-framework.com/www/doc/reference/Packages.html)
 - [API](http://www.lava-framework.com/www/doc/object/Lava.ClassManager.html)
 
-Standalone version is self-contained (it does not have any dependencies, like the main framework).
+Standalone version is self-contained (it does not have any dependencies).
 
 ##Performance
 
-Performance comparison of the fastest class systems:
+Performance comparison of the fastest and the most popular class systems:
 - Overridden method calls: http://jsperf.com/js-inheritance-method-calls/2
 - Object construction: http://jsperf.com/js-inheritance-object-construction
 
