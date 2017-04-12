@@ -1,6 +1,6 @@
-<i>Update 09.03.15: "polymorphic mode" and "full export" features are deprecated.</i>
-
 #Standalone version of Lava.ClassManager
+
+@todo: docs are outdated
 
 [![npm](https://img.shields.io/npm/v/lava-class-manager.svg)](https://www.npmjs.com/package/lava-class-manager)
 [![npm](https://img.shields.io/npm/l/lava-class-manager.svg)]()
@@ -9,14 +9,13 @@ One of the fastest and most convenient class systems in the world.
 
 Quick facts:
 - Speed is equal to native hand-written classes
-- Powerful features like run-time prototype patching and shared members
+- Powerful features like "Shared" members
 - Classes can be generated on server and in browser
 - Supports multiple inheritance
 
 Docs:
 - [Basic tutorial](http://www.lava-framework.com/www/doc/tutorial/Classes.html)
 - [Detailed reference](http://www.lava-framework.com/www/doc/reference/Classes.html)
-- [Patches and static constructors](http://www.lava-framework.com/www/doc/reference/ClassPatches.html)
 - [Packages](http://www.lava-framework.com/www/doc/reference/Packages.html)
 - [API](http://www.lava-framework.com/www/doc/object/Lava.ClassManager.html)
 
