@@ -7,11 +7,11 @@
 
 if (typeof module != 'undefined' && module.exports) {
 
-	module.exports = Lava;
+	module.exports = ClassManager;
 
 } else {
 
-	_global.Lava = Lava;
+	_global.ClassManager = ClassManager;
 
 }
 

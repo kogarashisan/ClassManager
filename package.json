@@ -1,9 +1,9 @@
 {
   "name": "lava-class-manager",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Fast and beautiful class system",
   "author": "Alex Galashov",
-  "main": "lib/class_manager.js",
+  "main": "builds/es5/ClassManager.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/kogarashisan/ClassManager"
@@ -17,9 +17,16 @@
     "inheritance"
   ],
   "devDependencies": {
-    "grunt": ">= 0.4.4",
-    "grunt-cli": ">= 0.1.13",
-    "lava": "^0.13.3"
+    "chai": "^4.2.0",
+    "chai-spies": "^1.0.0",
+    "coveralls": "^3.1.0",
+    "mocha": "^7.1.2",
+    "nyc": "^15.0.0-beta.0",
+    "uglify-js": "^3.9.3"
+  },
+  "scripts": {
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "license": "MIT"
 }

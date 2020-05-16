@@ -1,3 +1,7 @@
 /node_modules
-/.idea
+/\.idea
 /.ssh
+/\.nyc_output
+/coverage
+builds/\_tmp
+builds/class-manager.raw.js

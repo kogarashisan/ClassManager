@@ -1,6 +1,5 @@
 /node_modules
 /.idea
 /.ssh
-
-/build
-/Gruntfile.js
+/coverage
+/www
